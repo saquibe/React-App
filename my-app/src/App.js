@@ -18,9 +18,9 @@ function App() {
     <div>
       <Header />
       <FormArea addNote={addNote} />
-      <Note />
-      <Note />
-      <Note />
+      {notes.map((note) => (
+        <Note title={note.title} content={note.content} />
+      ))}
       <Footer />
     </div>
   );
