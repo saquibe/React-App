@@ -2,12 +2,18 @@ import { Fab, Paper, TextField } from "@mui/material";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 
-function FormArea() {
+function FormArea({ addNote }) {
   const [note, setNote] = useState({
     title: "",
     content: "",
   });
-  console.log(note);
+  function clickHandler() {
+    addNote(note);
+    setNote({
+      title: "",
+      content: "",
+    });
+  }
   function changeHandler(event) {
     const { name, value } = event.target;
     setNote((preValues) => {
@@ -39,7 +45,7 @@ function FormArea() {
           fullWidth
           autoComplete="off"
         />
-        <Fab style={{ marginTop: "20px" }}>
+        <Fab onClick={clickHandler} style={{ marginTop: "20px" }}>
           <AddIcon />
         </Fab>
       </form>

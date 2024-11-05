@@ -7,6 +7,7 @@ function Header() {
       <img
         style={{ width: "50px" }}
         src="https://www.excellisit.com/wp-content/uploads/2023/05/best-react-js-development-company-noida-india-adsvento-221704.png"
+        alt=""
       />
       <h1 style={{ margin: 0, fontFamily: "cursive", fontWeight: "100" }}>
         React App
