@@ -10,7 +10,7 @@ function Header() {
         alt=""
       />
       <h1 style={{ margin: 0, fontFamily: "cursive", fontWeight: "100" }}>
-        React App
+        Note App
       </h1>
     </Paper>
   );
